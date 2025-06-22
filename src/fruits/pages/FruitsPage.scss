@@ -1,0 +1,9 @@
+@use '../../styles/variables' as vars;
+
+.title {
+  font-size: 3.125rem;
+}
+
+.subtitle {
+  color: vars.$text-secondary-color;
+}

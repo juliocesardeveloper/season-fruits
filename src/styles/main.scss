@@ -1,0 +1,8 @@
+@use 'variables' as vars;
+
+// Estilos globales
+body {
+  font-family: vars.$font-primary;
+  color: vars.$text-color;
+  font-size: vars.$font-size-base;
+}
