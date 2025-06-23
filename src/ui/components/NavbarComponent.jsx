@@ -57,7 +57,7 @@ export const NavbarComponent = ({
       {
         favorites.length > 0 && (
           <Button
-            className="btn-outline-light bg-transparent border-black text-dark w-100 rounded-pill navbar-button"
+            className="btn-outline-light bg-transparent border-black text-dark rounded-pill navbar-button"
             onClick={toggleFavoritesView}
           >
               {showFavoritesOnly ? 'See all' : 'See favorites'}
