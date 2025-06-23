@@ -22,18 +22,18 @@ cd season-fruits-app
 ```
 
 2. Instala las dependencias:
-
+```
 yarn
-
+```
 
 3. Inicia el entorno de desarrollo:
-
+```
 yarn dev
-
+```
 4. Accede a la app en:
-
+```
 📍 http://localhost:5173
-
+```
 
 ### 🔍 Características principales
 
