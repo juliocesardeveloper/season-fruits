@@ -4,6 +4,7 @@ Una aplicación React + Vite que permite explorar frutas de temporada, consultar
 
 ### 🛠️ Tecnologías utilizadas
 
+- [Yarn](https://yarnpkg.com/) - (V.1.22.22)
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [React Router](https://reactrouter.com/)
