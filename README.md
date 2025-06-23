@@ -12,29 +12,6 @@ Una aplicación React + Vite que permite explorar frutas de temporada, consultar
 - [LocalStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
 
 ---
-
-### 📁 Estructura del proyecto
-
-src/
-│
-├── assets/images/fruits/ # Imágenes de frutas
-├── fruits/ # Hooks relacionados con la API
-│ └── hooks/useApi.js # Hook para llamadas a la API
-├── router/
-│ └── AppRouter.jsx # Definición de rutas
-├── ui/components/ # Componentes reutilizables
-│ ├── FruitCard.jsx
-│ ├── FruitsGrid.jsx
-│ ├── GeneralInformationCard.jsx
-│ └── NavbarComponent.jsx
-├── pages/
-│ └── FruitsPage.jsx # Página principal de frutas
-├── SeasonFruitsApp.jsx # Componente raíz con enrutamiento
-├── main.jsx # Punto de entrada de la app
-└── styles/ # Estilos globales
-
----
-
 ### 🚀 Instalación
 
 1. Clona el repositorio:
