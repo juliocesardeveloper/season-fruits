@@ -4,6 +4,7 @@ Una aplicación React + Vite que permite explorar frutas de temporada, consultar
 
 ### 🛠️ Tecnologías utilizadas
 
+- [Yarn](https://yarnpkg.com/) - (V.1.22.22)
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [React Router](https://reactrouter.com/)
@@ -12,53 +13,32 @@ Una aplicación React + Vite que permite explorar frutas de temporada, consultar
 - [LocalStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
 
 ---
-
-### 📁 Estructura del proyecto
-
-src/
-│
-├── assets/images/fruits/ # Imágenes de frutas
-├── fruits/ # Hooks relacionados con la API
-│ └── hooks/useApi.js # Hook para llamadas a la API
-├── router/
-│ └── AppRouter.jsx # Definición de rutas
-├── ui/components/ # Componentes reutilizables
-│ ├── FruitCard.jsx
-│ ├── FruitsGrid.jsx
-│ ├── GeneralInformationCard.jsx
-│ └── NavbarComponent.jsx
-├── pages/
-│ └── FruitsPage.jsx # Página principal de frutas
-├── SeasonFruitsApp.jsx # Componente raíz con enrutamiento
-├── main.jsx # Punto de entrada de la app
-└── styles/ # Estilos globales
-
----
-
 ### 🚀 Instalación
 
 1. Clona el repositorio:
 
-git clone https://github.com/tu-usuario/season-fruits-app.git
+```
+git clone https://github.com/juliocesardeveloper/season-fruits.git
 cd season-fruits-app
+```
 
 2. Instala las dependencias:
-
+```
 yarn
-
+```
 
 3. Inicia el entorno de desarrollo:
-
+```
 yarn dev
-
+```
 4. Accede a la app en:
-
+```
 📍 http://localhost:5173
-
+```
 
 ### 🔍 Características principales
 
-✅ Búsqueda por familia, orden, género o nombre.
+✅ Búsqueda por familia, orden o género.
 
 ✅ Visualización de propiedades nutricionales acumuladas.
 
@@ -74,16 +54,16 @@ yarn dev
 
 La app espera una API REST disponible bajo el path /api/fruit. Endpoints usados:
 
-Endpoint	Descripción
-GET /api/fruit/all	Lista de todas las frutas
-GET /api/fruit/family/:name	Frutas por familia
-GET /api/fruit/order/:name	Frutas por orden
-GET /api/fruit/genus/:name	Frutas por género
+| Petición | API | Descripción |
+|----------|-----|-------------|
+| GET | /api/fruit/all |	Lista de todas las frutas |
+| GET | /api/fruit/family/:family |	Frutas por familia |
+| GET | /api/fruit/order/:order |	Frutas por orden |
+| GET | /api/fruit/genus/:genus |	Frutas por género |
 
 ### 🌄 Imágenes
 
-Las imágenes de las frutas están en la carpeta /assets/images/fruits/ y se gestionan dinámicamente mediante import.meta.glob. Si no se encuentra la imagen correspondiente, se muestra una por defecto: not-available.webp.
+Las imágenes de las frutas están en la carpeta ```/assets/images/fruits/``` y se gestionan dinámicamente mediante ```import.meta.glob```. Si no se encuentra la imagen correspondiente, se muestra una por defecto: ```not-available.webp```.
 
 ### 🧠 Autor
-Desarrollado por Julio César Arroyave Herrera
-Frontend Developer especializado en ReactJS + VTEX IO
+Desarrollado por [Julio César Arroyave Herrera](https://github.com/juliocesardeveloper)
