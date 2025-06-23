@@ -5,15 +5,12 @@ import { GeneralInformationCard } from "../../ui/components"
 
 export const FruitsPage = () => {
   return (
-    <Container fluid>
-      <Container className="align-items-center justify-content-center text-center" >
+    <div className="fruits-page d-flex flex-column align-items-center justify-content-center">
+      <div className="align-items-center justify-content-center text-center" >
         <h1 className="fw-bold title">Season fruits</h1>
-        <p className="text-uppercase fw-normal fs-4 lh-lg subtitle">the most wonderful fruits</p>
-      </Container>
-      <Container className="d-flex flex-row gap-3 justify-content-center" >
-        <FruitsGrid />
-        <GeneralInformationCard />
-      </Container>
-    </Container>
+        <p className="text-uppercase fw-normal fs-4 lh-lg secondary-color">the most wonderful fruits</p>
+      </div>
+      <FruitsGrid />
+    </div>
   )
 }

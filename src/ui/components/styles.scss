@@ -1,0 +1,53 @@
+@use '../../styles/variables' as vars;
+
+.sec-color {
+  color: vars.$text-secondary-color !important;
+}
+
+.card-fruit-container {
+  min-width: 19.8125rem !important;
+}
+
+.fruit-text {
+  max-width: 100px;
+  min-width: 100px;
+}
+
+.nutritions-text {
+  font-size: 1.125rem !important;
+}
+
+.nutritions-data-container p,
+.nutritions-title {
+  margin-bottom: 8px;
+}
+
+.nav-grid-fruits-container {
+  max-width: 71%;
+}
+
+.general-information-card {
+  background-color: #F9F9F9 !important;
+  min-width: 20% !important;
+  max-height: fit-content;
+}
+
+.nutritions-data-item {
+  color: #000;
+}
+
+.navbar-button:hover {
+  color: #000 !important;
+}
+
+.selector-item .option-item:hover {
+  background-color: #F9F9F9 !important;
+  color: #000 !important;
+}
+
+.card-fruit-container img {
+  height: 223px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 340px;
+}
