@@ -53,11 +53,12 @@ yarn dev
 
 La app espera una API REST disponible bajo el path /api/fruit. Endpoints usados:
 
-Endpoint	Descripción
-GET /api/fruit/all	Lista de todas las frutas
-GET /api/fruit/family/:name	Frutas por familia
-GET /api/fruit/order/:name	Frutas por orden
-GET /api/fruit/genus/:name	Frutas por género
+| Petición | API | Descripción |
+|----------|-----|-------------|
+| GET | /api/fruit/all |	Lista de todas las frutas |
+| GET | /api/fruit/family/:family |	Frutas por familia |
+| GET | /api/fruit/order/:order |	Frutas por orden |
+| GET | /api/fruit/genus/:genus |	Frutas por género |
 
 ### 🌄 Imágenes
 
