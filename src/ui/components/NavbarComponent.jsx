@@ -28,9 +28,9 @@ export const NavbarComponent = ({
   };
 
   return (
-    <Nav className="card d-flex flex-row w-100 gap-3 border-0 justify-content-end align-items-center">
+    <Nav className="card d-flex flex-sm-column flex-md-row gap-3 border-0 px-4 p-md-0 justify-content-center justify-content-md-end align-items-center">
       <select
-        className="form-select w-25 rounded-pill"
+        className="form-select rounded-pill selector-item"
         value={searchType}
         onChange={(e) => setSearchType(e.target.value)}
       >
@@ -41,7 +41,7 @@ export const NavbarComponent = ({
       </select>
 
       <select
-        className="form-select w-25 rounded-pill selector-item"
+        className="form-select  rounded-pill selector-item"
         value={searchValue}
         onChange={handleSearchValueChange}
         disabled={searchOptions.length === 0}
@@ -57,7 +57,7 @@ export const NavbarComponent = ({
       {
         favorites.length > 0 && (
           <Button
-            className="btn-outline-light bg-transparent border-black text-dark rounded-pill navbar-button"
+            className="btn-outline-light bg-transparent border-black text-dark w-100 rounded-pill navbar-button"
             onClick={toggleFavoritesView}
           >
               {showFavoritesOnly ? 'See all' : 'See favorites'}

@@ -4,14 +4,40 @@
   color: vars.$text-secondary-color !important;
 }
 
-.card-fruit-container {
-  min-width: 19.8125rem !important;
+@media (min-width: 768px) {
+  /* Estilos para tablets en adelante */
+  .card-fruit-container {
+    min-width: 19.8125rem !important;
+  }
+
+  .nav-grid-fruits-container {
+    max-width: 66%;
+  }
+  .fruit-text {
+    max-width: 100px;
+    min-width: 100px;
+  }
+  .selector-item {
+    width: 25% !important;
+  }
+
+  .navbar-button {
+    width: auto !important;
+  }
+
+  .general-information-card {
+    max-width: 100%;
+  }
 }
 
+.card-fruit-container {
+    max-width: 307px;
+  }
+
 .fruit-text {
-  max-width: 100px;
-  min-width: 100px;
-}
+    max-width: 80px;
+    min-width: 80px;
+  }
 
 .nutritions-text {
   font-size: 1.125rem !important;
@@ -22,18 +48,21 @@
   margin-bottom: 8px;
 }
 
-.nav-grid-fruits-container {
-  max-width: 71%;
-}
+
 
 .general-information-card {
   background-color: #F9F9F9 !important;
   min-width: 20% !important;
+  max-width: 90%;
   max-height: fit-content;
 }
 
 .nutritions-data-item {
   color: #000;
+}
+
+.navbar-button {
+  width: 100%;
 }
 
 .navbar-button:hover {

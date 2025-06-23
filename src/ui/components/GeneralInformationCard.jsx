@@ -3,7 +3,7 @@ import './styles.scss'
 export const GeneralInformationCard = ({ fruits, calories, fat, sugar, carbohydrates, protein, loading, error }) => {
   return (
     !loading && !error ? (
-      <div className="general-information-card">
+      <div >
         <p className='sec-color'>General Information</p>
 
         <div className='general-info-data-container'>

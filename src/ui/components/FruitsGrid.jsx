@@ -56,14 +56,29 @@ export const FruitsGrid = () => {
     setFavorites(storedFavorites);
   }, []);
 
-  const toggleFavorite = (fruitName) => {
-  const updatedFavorites = favorites.includes(fruitName)
-    ? favorites.filter(name => name !== fruitName)
-    : [...favorites, fruitName];
+//   const toggleFavorite = (fruitName) => {
+//   const updatedFavorites = favorites.includes(fruitName)
+//     ? favorites.filter(name => name !== fruitName)
+//     : [...favorites, fruitName];
 
-  setFavorites(updatedFavorites);
-  localStorage.setItem('fruit-favorites', JSON.stringify(updatedFavorites));
-};
+//   setFavorites(updatedFavorites);
+//   localStorage.setItem('fruit-favorites', JSON.stringify(updatedFavorites));
+// };
+
+  const toggleFavorite = (fruitName) => {
+    const updatedFavorites = favorites.includes(fruitName)
+      ? favorites.filter(name => name !== fruitName)
+      : [...favorites, fruitName];
+
+    setFavorites(updatedFavorites);
+    localStorage.setItem('fruit-favorites', JSON.stringify(updatedFavorites));
+
+    // Si estamos viendo solo favoritos y ya no hay ninguno, volvemos a "ver todos"
+    if (showFavoritesOnly && updatedFavorites.length === 0) {
+      setShowFavoritesOnly(false);
+      setVisibleCount(8);
+    }
+  };
 
 
   useEffect(() => {
@@ -150,7 +165,11 @@ export const FruitsGrid = () => {
 
   const toggleFavoritesView = () => {
     setShowFavoritesOnly(prev => !prev);
-    setVisibleCount(8); // reset del paginado
+    if (favorites.length === 0) {
+      setSearchValue("");
+      setFruits(allFruits);
+    }
+    setVisibleCount(8);
   };
 
   const fruitsToDisplay = showFavoritesOnly
@@ -160,8 +179,8 @@ export const FruitsGrid = () => {
   const hasFruits = fruits.length > 0;
 
   return (
-    <div className="d-flex py-4 justify-content-center flex-row gap-4 fruits-grid-main-container">
-        <div className="d-flex flex-column gap-3 nav-grid-fruits-container">
+    <div className="d-flex py-4 justify-content-center flex-column-reverse flex-lg-row gap-4 fruits-grid-main-container">
+        <div className="d-flex justify-content-center flex-column gap-3 nav-grid-fruits-container">
           <div>
             <NavbarComponent
               searchType={searchType}
@@ -190,7 +209,7 @@ export const FruitsGrid = () => {
           )}
 
           {!loading && !error && (
-            <div className="d-flex justify-content-start flex-wrap gap-4 fruits-grid-container">
+            <div className="d-flex justify-content-center justify-content-md-start flex-wrap gap-4 fruits-grid-container">
               {hasFruits ? (
                 fruitsToDisplay.slice(0, visibleCount).map((fruit, index) => (
                   <FruitCard
@@ -210,7 +229,7 @@ export const FruitsGrid = () => {
               )}
             </div>
           )}
-          {visibleCount < fruits.length && (
+          {visibleCount < fruitsToDisplay.length && (
             <div className="text-center w-100">
               <button
                 className="btn btn-outline-dark mt-3 rounded-pill text-uppercase"
@@ -223,7 +242,7 @@ export const FruitsGrid = () => {
         </div>
 
       {hasFruits && (
-        <div className="card rounded-4 p-3 general-information-card">
+        <div className="card rounded-4 p-3 m-auto m-md-0 general-information-card">
           <GeneralInformationCard
             fruits={fruits.length}
             calories={calories.toFixed(2)}
