@@ -17,7 +17,7 @@ Una aplicación React + Vite que permite explorar frutas de temporada, consultar
 1. Clona el repositorio:
 
 ```
-git clone https://github.com/tu-usuario/season-fruits-app.git
+git clone https://github.com/juliocesardeveloper/season-fruits.git
 cd season-fruits-app
 ```
 
@@ -37,7 +37,7 @@ yarn dev
 
 ### 🔍 Características principales
 
-✅ Búsqueda por familia, orden, género o nombre.
+✅ Búsqueda por familia, orden o género.
 
 ✅ Visualización de propiedades nutricionales acumuladas.
 
@@ -62,8 +62,7 @@ La app espera una API REST disponible bajo el path /api/fruit. Endpoints usados:
 
 ### 🌄 Imágenes
 
-Las imágenes de las frutas están en la carpeta /assets/images/fruits/ y se gestionan dinámicamente mediante import.meta.glob. Si no se encuentra la imagen correspondiente, se muestra una por defecto: not-available.webp.
+Las imágenes de las frutas están en la carpeta ```/assets/images/fruits/``` y se gestionan dinámicamente mediante ```import.meta.glob```. Si no se encuentra la imagen correspondiente, se muestra una por defecto: ```not-available.webp```.
 
 ### 🧠 Autor
-Desarrollado por Julio César Arroyave Herrera
-Frontend Developer especializado en ReactJS + VTEX IO
+Desarrollado por [Julio César Arroyave Herrera](https://github.com/juliocesardeveloper)
